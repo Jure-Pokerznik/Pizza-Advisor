@@ -45,11 +45,36 @@
         
         <!--Start login!-->
         
-        <div class="row">
-        <form>
+        <div class="col-xs-12 col-sm-6 col-lg-3 col-md-4">
+        <form data-toggle="validator" role="form">
+          <div class="form-group">
+            <label for="username">Uporabniško ime:</label>
+            <input type="username" pattern="^[A-Za-z]{2,}$" maxlength="25" class="form-control" placeholder="uporabniško ime" id="username" data-error="Vnesete lahko samo črke in številke!" required>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group"> <!--Password min char = 6-->
+            <label for="password">Geslo:</label>
+            <input type="password" data-minlength="6" maxlength="255" class="form-control" id="password" placeholder="geslo" data-error="Vnesite vsaj 6 znakov!" required>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+          <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="zapomni">Zapomni si me!</input>
+              </label>
+          <div class="form-group">
+          <button type="submit" class="btn btn-default">Prijava!</button>
+          </div>
+        </form>
+
+
+
+        <!--
+
         <div class="form-group">
         <label for="Username">Uporabniško ime</label><br>
-        <!--change input type to 'email' if email is used to login!-->
         <input type="text" placeholder="uporabniško ime" id="Username">
         </div>
         <div class="form-group">
@@ -64,6 +89,8 @@
         <button type="submit" class="btn btn-default">Prijava!</button>
         </div>
         </form>
+
+        -->
         <!--End login!-->
         <a href="registracija.html">Registriraj se!</a>
         <p></p>
@@ -82,6 +109,7 @@
 <script src="js/jquery-1.11.3.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/bootstrap.js"></script>
+<script src="js/validator.js"></script>
 </div>
 </body>
 </html>
