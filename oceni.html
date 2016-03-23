@@ -43,7 +43,7 @@
     </div>
         
         <!--Oceni!-->
-		<!-- ->USLES PIS OF ŠIT
+		<!-- ->Old code I should remove at some point
         <div align="left" class="col-xs-12 col-lg-12">
                 <label for="ime">Ime:</label>
                 <br>
@@ -62,30 +62,31 @@
         </div>
 		-->
 		
-		<!-- add Validator js thingy-->
+		
 		<div align="left" class="col-xs-12 col-sm-6 col-lg-3 col-md-4">
 			<form data-toggle="validator" role="form">
 				<div class="form-group">
 					<label for="ime">Ime</label>
-					<input type="text" pattern="[A-Za-z]{2,}" maxlength="15" class="form-control" id="ime" placeholder="Janez" data-error="Vnesite pravilno ime!" required>
+					<input type="text" pattern="^[A-Za-z\šđčćžŠĐŽČĆ]{2,}$" maxlength="15" class="form-control" id="ime" placeholder="Janez" data-error="Vnesite pravilno ime!" required>
 					<div class="help-block with-errors"></div>
 				</div>
 				<div class="form-group">
 					<label for="priimek">Priimek</label>
-					<input type="text" pattern="[A-Za-z]{2,}" maxlength="20" class="form-control" id="priimek" placeholder="Novak" required data-error="Vnesite pravilen priimek!">
+					<input type="text" pattern="^[A-Za-z\šđčćžŠĐŽČĆ]{2,}$" maxlength="20" class="form-control" id="priimek" placeholder="Novak" required data-error="Vnesite pravilen priimek!">
 					<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 					<div class="help-block with-errors"></div>
 				</div>
 				<div class="form-group">
 					<label for="vzdevek">Vzdevek</label>
-					<input type="text" pattern="[A-Za-z0-9]{2,}" maxlength="25" class="form-control" id="vzdevek" placeholder="1337Potato" required data-error="Vnesite pravilen priimek!">
+					<input type="text" pattern="^[A-Za-z0-9]{2,}$" maxlength="25" class="form-control" id="vzdevek" placeholder="1337Potato">
 					<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-					<div class="help-block with-errors"></div>
+					<div class="help-block">Uporabite lahko samo črke in številke</div>
 				</div>
 				<div class="form-group">
 					<label for="pizzerija">Izberite pizzerijo:</label>
 					<select class="form-control" id="pizzerija">
-						<option>AL Pachino</option>
+						<option>Al Capone</option>
+						<option>Al Pachino</option>
 						<option>Astoria City Cusine</option>
 						<option>Bowling center Strike</option>
 						<option>Bruc bar</option>
@@ -94,7 +95,7 @@
 						<option>Fresh 4 life</option>
 						<option>Galerija, Urška Kocbek s.p.</option>
 						<option>Gurmanski hram</option>
-						<option>HITRI GONZALES</option>
+						<option>Hitri gonzales</option>
 						<option>Kanape</option>
 						<option>Kavarna MM Panda</option>
 						<option>Kavarna Stil Burger</option>
@@ -131,10 +132,30 @@
     					<option>4</option>
     					<option>5</option>
   					</select>
-					
-					<!--Insert radio buttons and checkboxes-->
-				
-				
+					<!--Insert radio buttons or checkboxes-->
+					<br/><p><b>Vrsta naročila:</b></p>
+				<div class="form-group">
+
+					<div class="radio">
+						<label>
+							<input type="radio" name="dostava_ne" id="dostava_ne" required>V restavraciji</input>
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="dostava_ne" id="dostava_ne" required>Dostava na dom</input>
+						</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="komentar">Komentar:</label>
+					<textarea class="form-control" rows="4" id="komentar"></textarea>
+				</div>
+				<div>
+					<button type="submit" class="btn btn-primary">Pošlji</button>
+					<button type="reset" class="btn btn-default">Začni znova</button>
+				</div>
+
 				</form>
 				 
 				
