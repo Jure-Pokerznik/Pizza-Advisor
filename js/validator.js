@@ -66,8 +66,8 @@
     disable: true,
     custom: {},
     errors: {
-      match: 'Does not match',
-      minlength: 'Not long enough'
+      match: 'Gesli se ne ujemata!',
+      minlength: 'Vnesite vsaj 6 znakov!'
     }
   }
 
