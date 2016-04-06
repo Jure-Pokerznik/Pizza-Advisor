@@ -6,34 +6,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pizza Advisor | Maribor</title>
 
-<script src="js/jquery-1.11.3.min.js"></script> 
-<!-- jquerry-->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script type="js/jquery-ui.min.js"></script>
+<!-- jquery-->
 <script>
         $(document).ready(function(){
           //Skrije vse class opisPizzarije
           $(".opisPizzarije").hide();
           $("#vsiOpisi").click(function(){
-           $(".opisPizzarije").toggle();
+           $(".opisPizzarije").show("slide");
     });
           $("#button1").click(function(){
-           $(".pizza1").toggle();
+           $(".pizza1").toggle("slide");
     });
           $("#button2").click(function(){
-           $(".pizza2").toggle();
+           $(".pizza2").toggle("slide");
     });
           $("#button3").click(function(){
-           $(".pizza3").toggle();
+           $(".pizza3").toggle("slide");
     });
           $("#button4").click(function(){
-           $(".pizza4").toggle();
+           $(".pizza4").toggle("slide");
     });
           $("#button5").click(function(){
-           $(".pizza5").toggle();
+           $(".pizza5").toggle("slide");
     });
 });
-        
         </script>
-<!-- jquerry end-->
+<!-- jquery end-->
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.css">
 

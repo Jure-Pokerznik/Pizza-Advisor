@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pizza Advisor | Maribor</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.css">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<header>
+		<img src="images/2000x200.png" width="100%" height="auto" alt="Replace with pizza"/>
+    </header>
+<div class="container" align="center">
+	<nav>
+    	<a href="index.html" class="btn btn-default" role="button">Domov</a>
+      <a href="naj_pizze.html" class="btn btn-default" role="button">Naj Pizzarije</a>
+      <a href="oceni.html" class="btn btn-info" role="button">Oceni</a>
+      <a href="prijava.html" class="btn btn-default" role="button">Prijavi se</a>
+    </nav>
+  <div class="content">
+  	<div class="row">
+    	<div class="col-xs-3 col-lg-2">
+    	  <h2 align="left">Oceni </h2>
+    	</div>
+        
+        <!-- Seach disabled...
+        <div class="col-xs-3 col-lg-10" align="right">
+  			
+            <form>
+        		<input type="search" class="text" placeholder="Vnesite ime pizzarije...">
+    			<input align="right" class="btn btn-info" type="submit" value="Išči!">
+    		</form>!-->
+    </div>
+        
+        <!--Oceni!-->
+		<!-- ->Old code I should remove at some point
+        <div align="left" class="col-xs-12 col-lg-12">
+                <label for="ime">Ime:</label>
+                <br>
+                <input type="text" class="user-comment" id="ime">
+        </div>
+        <br>
+        <div align="left" class="col-xs-12 col-lg-12">
+                <label for="priimek">Priimek:</label>
+                <br>
+                <input type="text" class="user-comment" id="priimek">
+        </div>
+        <div align="left" class="col-xs-12 col-lg-12">
+                <label for="vzdevek">Vzdevek:</label>
+                <br>
+                <input type="text" class="user-comment" id="vzdevek">
+        </div>
+		-->
+		
+		
+		<div align="left" class="col-xs-12 col-sm-6 col-lg-3 col-md-4">
+			<form data-toggle="validator" role="form">
+				<div class="form-group">
+					<label for="ime">Ime</label>
+					<input type="text" pattern="^[A-Za-z\šđčćžŠĐŽČĆ]{2,}$" maxlength="15" class="form-control" id="ime" placeholder="Janez" data-error="Vnesite pravilno ime!" required>
+					<div class="help-block with-errors"></div>
+				</div>
+				<div class="form-group">
+					<label for="priimek">Priimek</label>
+					<input type="text" pattern="^[A-Za-z\šđčćžŠĐŽČĆ]{2,}$" maxlength="20" class="form-control" id="priimek" placeholder="Novak" required data-error="Vnesite pravilen priimek!">
+					<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+					<div class="help-block with-errors"></div>
+				</div>
+				<div class="form-group">
+					<label for="vzdevek">Vzdevek</label>
+					<input type="text" pattern="^[A-Za-z0-9]{2,}$" maxlength="25" class="form-control" id="vzdevek" placeholder="1337Potato">
+					<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+					<div class="help-block">Uporabite lahko samo črke in številke</div>
+				</div>
+				<div class="form-group">
+					<label for="pizzerija">Izberite pizzerijo:</label>
+					<select class="form-control" id="pizzerija">
+						<option>Al Capone</option>
+						<option>Al Pachino</option>
+						<option>Astoria City Cusine</option>
+						<option>Bowling center Strike</option>
+						<option>Bruc bar</option>
+						<option>Da noi fast food</option>
+						<option>Eat smart</option>
+						<option>Fresh 4 life</option>
+						<option>Galerija, Urška Kocbek s.p.</option>
+						<option>Gurmanski hram</option>
+						<option>Hitri gonzales</option>
+						<option>Kanape</option>
+						<option>Kavarna MM Panda</option>
+						<option>Kavarna Stil Burger</option>
+						<option>LEON GOOD FOOD & MOOD</option>
+						<option>Lunch box</option>
+						<option>Mango Snacks</option>
+						<option>Okrepčevalnica MM PANDA</option>
+						<option>Okrepčevalnica Pikapolonica</option>
+						<option>Okrepčevalnica Pivnica Alf</option>
+						<option>Pek Matjaž Razlagova</option>
+						<option>Pek Matjaž Trubarjeva</option>
+						<option>Pek Matjaž TyrÅ¡eva</option>
+						<option>Pizzeria in špagetarija Da noi</option>
+						<option>Pizzeria in špageteria Al Capone</option>
+						<option>Pronto</option>
+						<option>Restavracija Ancora</option>
+						<option>Restavracija S</option>
+						<option>Romska restavracija - Romani kafenava</option>
+						<option>Tasty snacks</option>
+						<option>Taverna Sicilia</option>
+						<option>Tottapizza</option>
+						<option>Trattoria Padrino</option>
+						<option>Un momento-pizza time</option>
+						<option>VERDI</option>
+						<option>Vivaldi</option>
+						<option>Žito Maribor Center</option>
+  					</select>
+				</div>
+				<label for="Ocena">Ocena:</label>
+  					<select class="form-control" id="Ocena">
+    					<option>1</option>
+    					<option>2</option>
+    					<option>3</option>
+    					<option>4</option>
+    					<option>5</option>
+  					</select>
+					<!--Insert radio buttons or checkboxes-->
+					<br/><p><b>Vrsta naročila:</b></p>
+				<div class="form-group">
+
+					<div class="radio">
+						<label>
+							<input type="radio" name="dostava_ne" id="dostava_ne" required>V restavraciji</input>
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="dostava_ne" id="dostava_ne" required>Dostava na dom</input>
+						</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="komentar">Komentar:</label>
+					<textarea placeholder="komentar" class="form-control" rows="4" id="komentar"></textarea>
+				</div>
+				<div>
+					<button type="submit" class="btn btn-primary">Pošlji</button>
+					<button type="reset" class="btn btn-default">Začni znova</button>
+				</div>
+
+				</form>
+				 
+				
+        
+				
+            <!--div class="col-xs-5 col-lg-3" align="left">
+                <div class="radio">
+                    <label> 
+                      <input type="radio" name="obiski" id="obiski" value="opcija1">
+                      <input type="radio" name="obiski" id="obiski" value="opcija1">
+                      
+                    </label>
+                </div>
+            </div>
+				</div>
+                <br>
+                <br>
+                <br>
+                <div align="left" class="col-xs-5 col-lg-3">
+                <label for="txt">Komentar:</label>
+                <br>
+                <input type="text" class="user-comment" id="txt">
+                </div>
+			</form>
+		</div>
+        <br>
+        <div align="left" class="row">
+        	<button type="submit" class="btn btn-default">Oddaj</button>
+			
+			-->
+        </div>
+        </div>
+     </div> 
+<footer class="text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>Copyright © Pizza Advisor | Maribor. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-1.11.3.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.js"></script>
+<script src="js/validator.js"></script>
+</body>
+</html>
