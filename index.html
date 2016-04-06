@@ -6,6 +6,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pizza Advisor | Maribor</title>
 
+<script src="js/jquery-1.11.3.min.js"></script> 
+<!-- jquerry-->
+<script>
+        $(document).ready(function(){
+          //Skrije vse class opisPizzarije
+          $(".opisPizzarije").hide();
+          $("#vsiOpisi").click(function(){
+           $(".opisPizzarije").toggle();
+    });
+          $("#button1").click(function(){
+           $(".pizza1").toggle();
+    });
+          $("#button2").click(function(){
+           $(".pizza2").toggle();
+    });
+          $("#button3").click(function(){
+           $(".pizza3").toggle();
+    });
+          $("#button4").click(function(){
+           $(".pizza4").toggle();
+    });
+          $("#button5").click(function(){
+           $(".pizza5").toggle();
+    });
+});
+        
+        </script>
+<!-- jquerry end-->
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.css">
 
@@ -39,6 +67,14 @@
     		</form>
         </div>
      </div>
+     <div class="row">
+        <!-- jquerry testing goes here-->
+        
+        <div align="right">
+          <button id="vsiOpisi" class="btn btn-default">Prikaži vse opise</button>
+        </div>
+         <!--end jquerry testing-->
+     </div>
      <!--Restavracija 1!-->
      <div class="row">
      	<div class="col-xs-12 col-lg-6">
@@ -54,7 +90,8 @@
                 	<li align="left"> Pizza mexica</li>
             	</ul>
   	        <article>
-        		<p align="left"> Pizzarija nam ponuja zanimiv izbor bogato obloženih pic iz krušne peči... </p>
+              <div align="left"><button id="button1" class="btn btn-default">Preberi več...</button></div>
+        		<p align="left" class="opisPizzarije pizza1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at varius ligula. Sed congue nibh ut enim vehicula, eu ultricies orci accumsan. Vivamus blandit varius enim at maximus. Nam faucibus tortor et eros malesuada feugiat. Donec justo justo, vestibulum non nunc sed, pellentesque vestibulum est. Vestibulum blandit mauris ac metus vestibulum iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean at efficitur leo. Mauris tristique dolor vel ex auctor ultrices. Nullam a urna nunc. Proin vestibulum leo sed elementum luctus. Cras et lorem in ex ornare feugiat sed et nibh.</p>
         		<p>&nbsp;</p>
         	</article>
   			
@@ -81,7 +118,8 @@
                 	<li align="left">Pizza tuna</li>
             	</ul>
   	        <article>
-        		<p align="left"> Pizzarija nam ponuja odlične pice za vsakogar... </p>
+              <div align="left"><button id="button2" class="btn btn-default">Preberi več...</button></div>
+        		<p align="left" class="opisPizzarije pizza2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at varius ligula. Sed congue nibh ut enim vehicula, eu ultricies orci accumsan. Vivamus blandit varius enim at maximus. Nam faucibus tortor et eros malesuada feugiat. Donec justo justo, vestibulum non nunc sed, pellentesque vestibulum est. Vestibulum blandit mauris ac metus vestibulum iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean at efficitur leo. Mauris tristique dolor vel ex auctor ultrices. Nullam a urna nunc. Proin vestibulum leo sed elementum luctus. Cras et lorem in ex ornare feugiat sed et nibh.</p>
         		<p>&nbsp;</p>
         	</article>
   			
@@ -106,7 +144,8 @@
                 	<li align="left">Pizza jalapeno</li>
             	</ul>
   	        <article>
-        		<p align="left"> Pizzarija nam ponuja odlične pice za vsakogar... </p>
+              <div align="left"><button id="button3" class="btn btn-default">Preberi več...</button></div>
+        		<p align="left" class="opisPizzarije pizza3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at varius ligula. Sed congue nibh ut enim vehicula, eu ultricies orci accumsan. Vivamus blandit varius enim at maximus. Nam faucibus tortor et eros malesuada feugiat. Donec justo justo, vestibulum non nunc sed, pellentesque vestibulum est. Vestibulum blandit mauris ac metus vestibulum iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean at efficitur leo. Mauris tristique dolor vel ex auctor ultrices. Nullam a urna nunc. Proin vestibulum leo sed elementum luctus. Cras et lorem in ex ornare feugiat sed et nibh.</p>
         		<p>&nbsp;</p>
         	</article>
   			
@@ -131,7 +170,8 @@
                 	<li align="left">Pizza jalapeno</li>
             	</ul>
   	        <article>
-        		<p align="left"> Pizzarija nam ponuja odlične pice za vsakogar... </p>
+              <div align="left"><button id="button4" class="btn btn-default">Preberi več...</button></div>
+        		<p align="left" class="opisPizzarije pizza4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at varius ligula. Sed congue nibh ut enim vehicula, eu ultricies orci accumsan. Vivamus blandit varius enim at maximus. Nam faucibus tortor et eros malesuada feugiat. Donec justo justo, vestibulum non nunc sed, pellentesque vestibulum est. Vestibulum blandit mauris ac metus vestibulum iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean at efficitur leo. Mauris tristique dolor vel ex auctor ultrices. Nullam a urna nunc. Proin vestibulum leo sed elementum luctus. Cras et lorem in ex ornare feugiat sed et nibh.</p>
         		<p>&nbsp;</p>
         	</article>
   			
@@ -156,7 +196,8 @@
                 	<li align="left">Pizza jalapeno</li>
             	</ul>
   	        <article>
-        		<p align="left"> Pizzarija nam ponuja odlične pice za vsakogar... </p>
+              <div align="left"><button id="button5" class="btn btn-default">Preberi več...</button></div>
+        		<p align="left" class="opisPizzarije pizza5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at varius ligula. Sed congue nibh ut enim vehicula, eu ultricies orci accumsan. Vivamus blandit varius enim at maximus. Nam faucibus tortor et eros malesuada feugiat. Donec justo justo, vestibulum non nunc sed, pellentesque vestibulum est. Vestibulum blandit mauris ac metus vestibulum iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean at efficitur leo. Mauris tristique dolor vel ex auctor ultrices. Nullam a urna nunc. Proin vestibulum leo sed elementum luctus. Cras et lorem in ex ornare feugiat sed et nibh.</p>
         		<p>&nbsp;</p>
         	</article>
   			
