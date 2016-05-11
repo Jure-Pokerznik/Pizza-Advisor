@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -152,7 +151,7 @@
 				</div>
 				<div class="form-group">
 					<label for="komentar">Komentar:</label>
-					<textarea placeholder="komentar" class="form-control" rows="4" id="komentar"></textarea>
+					<textarea name="comment" placeholder="komentar" class="form-control" rows="4" id="komentar"></textarea>
 				</div>
 				<div>
 					<button type="submit" class="btn btn-primary">Pošlji</button>

@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<?php
+$con=mysqli_connect("","","","");
+if (mysqli_connect_errno($con)){
+  echo "Failed to connect to " . mysqli_connect_error();
+}
+else {
+
+  mysqli_query($con,"INSERT INTO pizza-advisor (ime, priimek, vzdevek, izbranapizzerija, ocena, dostava, comment) VALUES ('$_REQUEST[ime]', '$_REQUEST[priimek]', '$_REQUEST[vzdevek]', '$_REQUEST[izbranapizzerija]', '$_REQUEST[ocena]', '$_REQUEST[dostava]', '$_REQUEST[comment]')");
+  
+  //echo "INSERT INTO pizza-advisor (ime, priimek, vzdevek, izbranapizzerija, ocena, dostava, comment) VALUES ('$_REQUEST[ime]', '$_REQUEST[priimek]', '$_REQUEST[vzdevek]', '$_REQUEST[izbranapizzerija]', '$_REQUEST[ocena]', '$_REQUEST[dostava]', '$_REQUEST[comment]')";
+}
+?>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -60,8 +72,17 @@
               <th>Dostava:</th>
               <td><?php echo $_REQUEST["dostava"]; ?></td>
             </tr>
+            <tr>
+              <th>Komentar:</th>
+              <td><?php echo $_POST["comment"]; ?></td>
+            </tr>
           </table>
              
+
+             <?php
+           
+           mysql_close($con);
+           ?>
           <!--PHP end-->
      </div>
   </div>
