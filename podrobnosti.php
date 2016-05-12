@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <?php
-$con=mysqli_connect("","","","");
+$servername = "";
+$username = "";
+$password = "";
+$world = "";
+$con=mysqli_connect($servername,$username,$password,$world);
 if (mysqli_connect_errno($con)){
   echo "Failed to connect to " . mysqli_connect_error();
 }
 else {
-
-  mysqli_query($con,"INSERT INTO pizza-advisor (ime, priimek, vzdevek, izbranapizzerija, ocena, dostava, comment) VALUES ('$_REQUEST[ime]', '$_REQUEST[priimek]', '$_REQUEST[vzdevek]', '$_REQUEST[izbranapizzerija]', '$_REQUEST[ocena]', '$_REQUEST[dostava]', '$_REQUEST[comment]')");
+  echo "Connected to database ";
   
-  //echo "INSERT INTO pizza-advisor (ime, priimek, vzdevek, izbranapizzerija, ocena, dostava, comment) VALUES ('$_REQUEST[ime]', '$_REQUEST[priimek]', '$_REQUEST[vzdevek]', '$_REQUEST[izbranapizzerija]', '$_REQUEST[ocena]', '$_REQUEST[dostava]', '$_REQUEST[comment]')";
+  mysqli_query($con,"INSERT INTO pizzaadvisor (ime, priimek, vzdevek, izbranapizzerija, ocena, dostava, comment) VALUES ('$_REQUEST[ime]', '$_REQUEST[priimek]', '$_REQUEST[vzdevek]', '$_REQUEST[izbranapizzerija]', '$_REQUEST[ocena]', '$_REQUEST[dostava]', '$_REQUEST[comment]')");
+  echo "INSERT INTO pizzaadvisor (ime, priimek, vzdevek, izbranapizzerija, ocena, dostava, comment) VALUES ('$_REQUEST[ime]', '$_REQUEST[priimek]', '$_REQUEST[vzdevek]', '$_REQUEST[izbranapizzerija]', '$_REQUEST[ocena]', '$_REQUEST[dostava]', '$_REQUEST[comment]')";
 }
 ?>
 <html lang="en">
@@ -77,12 +81,38 @@ else {
               <td><?php echo $_POST["comment"]; ?></td>
             </tr>
           </table>
-             
-
+             <table class="table" id="izpis">
+              <thead>
+                <tr>
+                  <th>Ime</th>
+                  <th>Priimek</th>
+                  <th>Vzdevek</th>
+                  <th>Pizzerija</th>
+                  <th>Ocena</th>
+                  <th>Dostava</th>
+                  <th>Komentar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php $result = mysqli_query($con,"SELECT * FROM pizzaadvisor");
+                while($row = mysqli_fetch_array($result))
+                {
+                ?>
+                <tr>
+                  <td><?php echo $row['ime'] ?></td>
+                  <td><?php echo $row['priimek'] ?></td>
+                  <td><?php echo $row['vzdevek'] ?></td>
+                  <td><?php echo $row['izbranapizzerija'] ?></td>
+                  <td><?php echo $row['ocena'] ?></td>
+                  <td><?php echo $row['dostava'] ?></td>
+                  <td><?php echo $row['comment'] ?></td>
+                </tr>
              <?php
-           
+           }
            mysql_close($con);
            ?>
+           </tbody>
+             </table>
           <!--PHP end-->
      </div>
   </div>
